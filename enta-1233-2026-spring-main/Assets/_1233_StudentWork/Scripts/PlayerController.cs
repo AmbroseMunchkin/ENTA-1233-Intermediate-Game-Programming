@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _direction;
 
+    [SerializeField] private float jumpPower;
+
     [SerializeField] private float smoothTime = 0.05f;
     private float _currentVelocity;
 
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
     }
     private void ApplyGravity()
     {
-        if (_characterController.isGrounded && _velocity < 0.0f)
+        if (IsGrounded() && _velocity < 0.0f)
         {
             _velocity = -1.0f;
         }
@@ -56,4 +58,13 @@ public class PlayerController : MonoBehaviour
         _input = context.ReadValue<Vector2>();
         _direction = new Vector3(_input.x, 0.0f, _input.y);
     }
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        if (!IsGrounded()) return;
+
+        _velocity += jumpPower;
+    }
+
+    private bool IsGrounded() => _characterController.isGrounded;
 }
