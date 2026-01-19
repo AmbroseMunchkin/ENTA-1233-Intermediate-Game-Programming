@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 _direction;
 
     [SerializeField] private float jumpPower;
+    private int _numberOfJumps;
+    [SerializeField] private int maxNumberOfJumps = 2;
 
     [SerializeField] private float smoothTime = 0.05f;
     private float _currentVelocity;
@@ -61,9 +64,19 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        if (!IsGrounded()) return;
+        if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
+        if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
+        _numberOfJumps++;
         _velocity += jumpPower;
+    }
+
+    private IEnumerator WaitForLanding()
+    {
+        yield return new WaitUntil(() => !IsGrounded());
+        yield return new WaitUntil(IsGrounded);
+
+        _numberOfJumps = 0;
     }
 
     private bool IsGrounded() => _characterController.isGrounded;
