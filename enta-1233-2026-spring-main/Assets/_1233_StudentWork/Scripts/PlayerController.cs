@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityMutiplier = 3.0f;
     private float _velocity;
 
+    [SerializeField] private Animator _animator;
+    private static readonly int Speed = Animator.StringToHash("Speed");
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
+        AnimationParameters();
     }
     private void ApplyGravity()
     {
@@ -80,4 +84,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private bool IsGrounded() => _characterController.isGrounded;
+
+    private void AnimationParameters()
+    {
+        _animator.SetFloat(Speed, _input.sqrMagnitude);
+    }
 }
