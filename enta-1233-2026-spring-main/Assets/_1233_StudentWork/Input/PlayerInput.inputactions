@@ -3,7 +3,7 @@
     "name": "PlayerInput",
     "maps": [
         {
-            "name": "PlayerDefault",
+            "name": "Gameplay",
             "id": "9c3ec308-11c4-4aa2-9522-0d3ca7b0f785",
             "actions": [
                 {
@@ -38,7 +38,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "WASD",
                     "id": "e06df549-e2e9-4967-8668-cc6ac23dc4cc",
                     "path": "2DVector",
                     "interactions": "",
