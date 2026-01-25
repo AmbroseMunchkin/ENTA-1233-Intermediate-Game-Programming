@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Animator _animator;
     private static readonly int Speed = Animator.StringToHash("Speed");
+    private static readonly int Grounded = Animator.StringToHash("Grounded");
+    private static readonly int StartJump = Animator.StringToHash("StartJump");
 
     private void Awake()
     {
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
         if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
+
         _numberOfJumps++;
         _velocity += jumpPower;
     }
@@ -88,5 +91,7 @@ public class PlayerController : MonoBehaviour
     private void AnimationParameters()
     {
         _animator.SetFloat(Speed, _input.sqrMagnitude);
+        _animator.SetBool(Grounded, _characterController.isGrounded);
+        _animator.SetBool(StartJump, !_characterController.isGrounded);
     }
 }
