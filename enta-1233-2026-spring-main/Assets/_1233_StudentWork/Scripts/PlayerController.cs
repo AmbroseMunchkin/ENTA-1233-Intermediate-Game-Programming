@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private static readonly int Grounded = Animator.StringToHash("Grounded");
     private static readonly int StartJump = Animator.StringToHash("StartJump");
 
+    [SerializeField] private PlayerAudioHandler _audioHandler;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -73,7 +75,7 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
         if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
-
+        _audioHandler.PlayJump();
         _numberOfJumps++;
         _velocity += jumpPower;
     }
@@ -83,6 +85,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitUntil(() => !IsGrounded());
         yield return new WaitUntil(IsGrounded);
 
+        _audioHandler.PlayLanding();
         _numberOfJumps = 0;
     }
 
