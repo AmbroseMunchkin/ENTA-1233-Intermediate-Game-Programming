@@ -6,17 +6,22 @@ using UnityEngine;
 /// </summary>
 public class PlayerMgr : Singleton<PlayerMgr>
 {
-    /*
-    public override void Awake() {
-        base.Awake();
-    }*/
-    
-    /// <summary>
-    /// This script should be attached to the player object
-    /// Meant for single-player games where accessing the player object quickly is convenient
-    /// </summary>
-    public GameObject PlayerObject => gameObject;
+    [SerializeField] private GameObject _playerPrefab;
 
+    public GameObject PlayerObject { get; private set; }
+    public bool HasSpawnedPlayer => PlayerObject != null;
+
+    public void SpawnPlayer(Vector3 position, Quaternion rotation)
+    {
+        if (PlayerObject)
+        {
+            Debug.LogError("Player already spawned!");
+            return;
+        }
+
+        PlayerObject = Instantiate(_playerPrefab, position, rotation);
+        Debug.Log("Player spawned");
+    }
     public void Move()
     {
         throw new NotImplementedException("Player does not have a controller");
