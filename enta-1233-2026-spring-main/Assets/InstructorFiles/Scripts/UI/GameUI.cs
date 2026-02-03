@@ -7,4 +7,8 @@ public class GameUI : MenuBase
     {
         return GameMenus.InGameUI;
     }
+    private void OnEnable()
+    {
+        AudioMgr.Instance.PlayMusic(AudioMgr.MusicTypes.Gameplay, 1);
+    }
 }
