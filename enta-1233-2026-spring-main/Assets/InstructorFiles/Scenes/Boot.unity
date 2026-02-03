@@ -353,6 +353,10 @@ PrefabInstance:
       propertyPath: '_reusableMusicClips.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 7942e84964e458842a54ecce7c876f9e, type: 3}
+    - target: {fileID: 1128344560038140083, guid: 931c026d2c7d4406f9ea4ce1972673d4, type: 3}
+      propertyPath: '_reusableMusicClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2af83cbe6ecc6ab408cf7ae811c8203a, type: 3}
     - target: {fileID: 1961049829362052442, guid: 931c026d2c7d4406f9ea4ce1972673d4, type: 3}
       propertyPath: m_Resource
       value: 
