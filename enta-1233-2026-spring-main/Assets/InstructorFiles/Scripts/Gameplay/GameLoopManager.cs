@@ -38,7 +38,7 @@ public class GameLoopManager : MonoBehaviour
         // Should the game loop control its own UI, or should that be the GameMgr?
         UIMgr.Instance.ShowMenu(GameMenus.InGameUI);
         
-        GameMgr.Instance.StartGame();
+       
 
         if (_isCountdownTimer)
         {
