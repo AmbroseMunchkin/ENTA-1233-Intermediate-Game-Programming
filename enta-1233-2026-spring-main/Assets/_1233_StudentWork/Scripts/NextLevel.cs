@@ -2,26 +2,22 @@
 /// Game over screen
 /// Allows for quitting or retrying
 /// </summary>
-public class GameOver : MenuBase
+public class NextLevel : MenuBase
 {
     public override GameMenus MenuType()
     {
-        return GameMenus.GameOverMenu;
+        return GameMenus.LevelCompleteMenu;
     }
 
-    public void ButtonRetry()
+    public void ButtonNextLevel()
     {
-        LevelMgr.Instance.RestartLevelCount();
+        LevelMgr.Instance.NextLevel();
         SceneMgr.Instance.LoadScene(GameScenes.Gameplay, GameMenus.InGameUI);
     }
 
     public void ButtonMainMenu()
     {
-        LevelMgr.Instance.RestartLevelCount();
         SceneMgr.Instance.LoadScene(GameScenes.MainMenu, GameMenus.MainMenu);
     }
-    private void OnEnable()
-    {
-        AudioMgr.Instance.PlayMusic(AudioMgr.MusicTypes.GameOver, 2);
-    }
+    
 }
