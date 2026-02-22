@@ -18,6 +18,37 @@ public class Projectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject == _source) return;
+
+        var damageReceiver = collision.gameObject.GetComponent<IDamageReceiver>();
+        if (damageReceiver != null)
+        {
+            var info = new DamageInfo
+            {
+                Amount = _damage,
+                Source = _source,
+                HitPoint = collision.contacts[0].point,
+                HitNormal = collision.contacts[0].normal
+            };
+            damageReceiver.ApplyDamage(info);
+        }
+
+        Destroy(gameObject);
+    }
+    public void Launch(Vector3 direction, GameObject source)
+    {
+        _source = source;
+        _rb.linearVelocity = direction.normalized * _speed;
+        transform.forward = direction;
+        Destroy(gameObject, _lifetime);
+    }
+    public void LaunchWithVelocity(Vector3 velocity, GameObject source)
+    {
+        _source = source;
+        _rb.linearVelocity = velocity;
+        if (velocity.sqrMagnitude > 0.001f)
+            transform.forward = velocity;
+        _rb.useGravity = true;
+        Destroy(gameObject, _lifetime);
     }
 }

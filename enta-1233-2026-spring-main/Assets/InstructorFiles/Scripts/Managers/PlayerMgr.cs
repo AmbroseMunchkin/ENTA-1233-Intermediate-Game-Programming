@@ -36,4 +36,8 @@ public class PlayerMgr : Singleton<PlayerMgr>
         // Run pause from game manager
         GameMgr.Instance.PauseGameToggle();
     }
+    public void DebugAssignAsPlayer(GameObject existingPlayer)
+    {
+        PlayerObject = existingPlayer;
+    }
 }
