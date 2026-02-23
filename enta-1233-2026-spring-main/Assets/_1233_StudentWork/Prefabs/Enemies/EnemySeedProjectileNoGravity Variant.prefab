@@ -70,6 +70,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 906663545539104637, guid: 7374678d09292b445a6e0669b59a73a0, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2960467897456877286, guid: 7374678d09292b445a6e0669b59a73a0, type: 3}
       propertyPath: m_Name
       value: EnemySeedProjectileNoGravity Variant
