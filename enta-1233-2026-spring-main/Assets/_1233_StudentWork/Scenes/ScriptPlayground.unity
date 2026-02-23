@@ -2975,12 +2975,20 @@ PrefabInstance:
       value: EnemySpike
       objectReference: {fileID: 0}
     - target: {fileID: 2210589447984365588, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2210589447984365588, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
       propertyPath: m_Constraints
-      value: 126
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2210589447984365588, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4591515758624991480, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4591515758624991480, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
       propertyPath: m_ProvidesContacts
