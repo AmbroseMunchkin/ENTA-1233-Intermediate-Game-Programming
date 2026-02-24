@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject == _source) return;
 
-        var damageReceiver = collision.gameObject.GetComponent<IDamageReceiver>();
+        var damageReceiver = collision.gameObject.GetComponentInParent<IDamageReceiver>();
         if (damageReceiver != null)
         {
             var info = new DamageInfo
