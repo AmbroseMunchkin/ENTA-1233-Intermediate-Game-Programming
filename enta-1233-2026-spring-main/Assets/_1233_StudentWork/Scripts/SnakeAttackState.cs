@@ -35,7 +35,7 @@ public class SnakeAttackState : EnemyState
 
         if (Vector3.Distance(_brain.transform.position, target.position) <= _brain.AttackRange + 0.5f)
         {
-            var receiver = target.GetComponent<IDamageReceiver>();
+            var receiver = target.GetComponentInChildren<IDamageReceiver>();
             if (receiver != null)
                 receiver.ApplyDamage(new DamageInfo
                 {
