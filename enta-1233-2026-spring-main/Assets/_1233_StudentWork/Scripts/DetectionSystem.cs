@@ -29,12 +29,13 @@ public class DetectionSystem : MonoBehaviour
         if (target == null) return false;
         return Vector3.Distance(transform.position, target.position) <= _detectionRange;
     }
-    public bool HasLineOfSight(Transform target)
+    public bool HasLineOfSight(Transform target, Vector3 offset)
     {
         if (target == null) return false;
+        var targetWOffset = target.position + offset;
 
-        var directionToTarget = (target.position - _eyePosition.position).normalized;
-        var distanceToTarget = Vector3.Distance(_eyePosition.position, target.position);
+        var directionToTarget = (targetWOffset - _eyePosition.position).normalized;
+        var distanceToTarget = Vector3.Distance(_eyePosition.position, targetWOffset);
 
         if (Vector3.Angle(transform.forward, directionToTarget) > _fieldOfView / 2) return false;
 

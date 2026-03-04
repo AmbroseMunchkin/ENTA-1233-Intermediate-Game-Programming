@@ -15,7 +15,7 @@ public class BloomMoveState : EnemyState
         if (target == null) return;
 
         var distance = Vector3.Distance(_brain.transform.position, target.position);
-        var hasLOS = _brain.Detection.HasLineOfSight(target);
+        var hasLOS = _brain.Detection.HasLineOfSight(target, _brain.TargetProvider.GetTargetOffset());
 
         if (hasLOS && distance <= _brain.AttackRange)
         {
