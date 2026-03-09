@@ -9,7 +9,8 @@ public class BloomBrain : MonoBehaviour
     [SerializeField] private EnemyAnimatorDriver _animatorDriver;
     [SerializeField] private RotateToTarget _rotator;
     [SerializeField] private Health _health;
-    [SerializeField] private ProjectileWeapon _weapon;
+    [SerializeField] private ProjectileWeapon _weapon1;
+    [SerializeField] private ProjectileWeapon _weapon2;
 
     [Header("Settings")]
     [SerializeField] private float _attackRange = 10f;
@@ -22,7 +23,8 @@ public class BloomBrain : MonoBehaviour
     public EnemyAnimatorDriver AnimatorDriver => _animatorDriver;
     public RotateToTarget Rotator => _rotator;
     public ITargetProvider TargetProvider {  get; private set; }
-    public ProjectileWeapon Weapon => _weapon;
+    public ProjectileWeapon Weapon => _weapon1;
+    public ProjectileWeapon Weapon2 => _weapon2;
     public float AttackRange => _attackRange;
     public float StopRange => _stopRange;
 
