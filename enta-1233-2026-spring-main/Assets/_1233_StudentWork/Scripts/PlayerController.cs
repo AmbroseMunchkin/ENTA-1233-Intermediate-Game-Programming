@@ -98,6 +98,13 @@ public class PlayerController : MonoBehaviour
         _numberOfJumps++;
         _velocity += jumpPower;
     }
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+
+        Debug.Log("Attack!");
+        _animator?.SetTrigger("Attack");
+    }
 
     private IEnumerator WaitForLanding()
     {
@@ -126,6 +133,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("[Player] Died!");
         _animator?.SetTrigger("Die");
         _characterController = null;
+        _animator = null;
         enabled = false;
 
         StartCoroutine(GameOverTransition());
