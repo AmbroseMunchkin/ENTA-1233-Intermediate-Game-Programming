@@ -28,9 +28,28 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private PlayerAudioHandler _audioHandler;
 
+    [SerializeField] private Health _health;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        if (_health == null) _health = GetComponent<Health>();
+    }
+    private void OnEnable()
+    {
+        if (_health != null)
+        {
+            _health.OnDamaged += HandleDamaged;
+            _health.OnDied += HandleDied;
+        }
+    }
+    private void OnDisable()
+    {
+        if (_health != null)
+        {
+            _health.OnDamaged -= HandleDamaged;
+            _health.OnDied -= HandleDied;
+        }
     }
     public void Update()
     {
@@ -96,5 +115,24 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat(Speed, _input.sqrMagnitude);
         _animator.SetBool(Grounded, _characterController.isGrounded);
         _animator.SetBool(StartJump, !_characterController.isGrounded);
+    }
+    private void HandleDamaged(DamageInfo info)
+    {
+        Debug.Log($"[Player] Hit by " + $"{info.Source?.name ?? "Unknown"} " + $"for {info.Amount} damage. " + $"HP: {_health.CurrentHealth}/{_health.MaxHealth}");
+        _animator?.SetTrigger("Hit");
+    }
+    private void HandleDied()
+    {
+        Debug.Log("[Player] Died!");
+        _animator?.SetTrigger("Die");
+        _characterController = null;
+        enabled = false;
+
+        StartCoroutine(GameOverTransition());
+    }
+    private IEnumerator GameOverTransition()
+    {
+        yield return new WaitForSeconds(2);
+        GameMgr.Instance.GameOver();
     }
 }

@@ -2151,6 +2151,9 @@ GameObject:
   - component: {fileID: 3002034724498201828}
   - component: {fileID: 2042689614739408933}
   - component: {fileID: 3121974910269914961}
+  - component: {fileID: 4866203748520861715}
+  - component: {fileID: 1561231513599678152}
+  - component: {fileID: 5680588931472230699}
   m_Layer: 0
   m_Name: Druid
   m_TagString: Player
@@ -2167,7 +2170,7 @@ Transform:
   m_GameObject: {fileID: 8169359619468014729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.48, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2252,6 +2255,7 @@ MonoBehaviour:
   gravityMutiplier: 1
   _animator: {fileID: 6421625793607679732}
   _audioHandler: {fileID: 3121974910269914961}
+  _health: {fileID: 1561231513599678152}
 --- !u!114 &3002034724498201828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,6 +2357,47 @@ MonoBehaviour:
   _footstepSource2: {fileID: 1056321397473908780}
   _landingSource: {fileID: 2898867760281788848}
   _jumpSource: {fileID: 4043244478039249860}
+--- !u!114 &4866203748520861715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169359619468014729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396770c0a984dd94ea3b93445dc42a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 1561231513599678152}
+  _damageMultiplier: 1
+--- !u!114 &1561231513599678152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169359619468014729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93e4f1a5b2cc014e976bf15aa36c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _isInvulnerable: 0
+--- !u!114 &5680588931472230699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169359619468014729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a2ff626bede084589d0630b712a4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: {x: 0, y: 1, z: 0}
 --- !u!1 &8284539299078684628
 GameObject:
   m_ObjectHideFlags: 0
