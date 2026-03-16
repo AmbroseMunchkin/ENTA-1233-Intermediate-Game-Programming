@@ -81,7 +81,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -89,23 +89,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 22.61
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.01594629
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.99987286
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 178.173
       objectReference: {fileID: 0}
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -145,7 +145,13 @@ PrefabInstance:
       addedObject: {fileID: 4978920539408488943}
     - targetCorrespondingSourceObject: {fileID: 9165852155616958795, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6536529713707514147}
+      addedObject: {fileID: 2504986592873143564}
+    - targetCorrespondingSourceObject: {fileID: 9165852155616958795, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5827169474790654152}
+    - targetCorrespondingSourceObject: {fileID: 9165852155616958795, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4654625093780803710}
     - targetCorrespondingSourceObject: {fileID: 3326355186000562099, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1635480350745318164}
@@ -213,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712a8ba8dd963514fa8fb55bf89b4172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!195 &6536529713707514147
+--- !u!195 &2504986592873143564
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,6 +241,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5827169474790654152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072284333192406025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa6924353d92d4eac17df51fbf3b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 2504986592873143564}
+--- !u!114 &4654625093780803710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072284333192406025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d2e4ad4e5521843a9f65f2cafedf73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 5827169474790654152}
+  _destination: {fileID: 0}
 --- !u!114 &1965911571744230961 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7681578811150791539, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}

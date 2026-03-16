@@ -247,6 +247,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9165852155616958795, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1370680202171868517}
+    - targetCorrespondingSourceObject: {fileID: 9165852155616958795, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6418207921963717073}
+    - targetCorrespondingSourceObject: {fileID: 9165852155616958795, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3585458322651326943}
     - targetCorrespondingSourceObject: {fileID: 3326355186000562099, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9119948437406141255}
@@ -448,6 +454,41 @@ MonoBehaviour:
   _muzzle: {fileID: 1562816240930145417}
   _fireRate: 1
   _arcHeight: 2
+--- !u!195 &6418207921963717073
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520791863498028652}
+  m_Enabled: 1
+  m_AgentTypeID: 1479372276
+  m_Radius: 0.65
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.45
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &3585458322651326943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520791863498028652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa6924353d92d4eac17df51fbf3b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 6418207921963717073}
 --- !u!4 &8033749121714263054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5345975193575635753, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
