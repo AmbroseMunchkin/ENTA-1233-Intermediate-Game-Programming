@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
             };
             damageReceiver.ApplyDamage(info);
         }
-
+        SpawnImpact(collision.contacts[0].point);
         Destroy(gameObject);
     }
     public void Launch(Vector3 direction, GameObject source)
@@ -51,4 +51,12 @@ public class Projectile : MonoBehaviour
         _rb.useGravity = true;
         Destroy(gameObject, _lifetime);
     }
+
+    #region Particle
+    [SerializeField] private GameObject _impactVfxPrefab;
+    void SpawnImpact(Vector3 position)
+    {
+        Instantiate(_impactVfxPrefab, position, Quaternion.identity);
+    }
+    #endregion
 }

@@ -162,3 +162,4 @@ MonoBehaviour:
   _speed: 20
   _lifetime: 5
   _useGravity: 0
+  _impactVfxPrefab: {fileID: 3328562853319023045, guid: a0fe94f2c916e2048a28e2d6f2d35dac, type: 3}

@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Update()
     {
+        //if (GameMgr.Instance.IsGameRunning == false) return;
+
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
