@@ -36,6 +36,6 @@ public sealed class NavMeshAgentMover : MonoBehaviour, IMover
     {
         if (_agent == null) return;
         _agent.isStopped = true;
-        _agent?.ResetPath();
+        _agent.ResetPath();
     }
 }
