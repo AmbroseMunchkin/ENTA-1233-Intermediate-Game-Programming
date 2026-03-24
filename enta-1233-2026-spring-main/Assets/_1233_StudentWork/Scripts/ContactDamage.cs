@@ -40,7 +40,7 @@ public class ContactDamage : MonoBehaviour
             };
             damageReceiver.ApplyDamage(info);
             _nextDamageTime = Time.time + _cooldown;
-            Debug.Log($"[ContactDamage] Da,aged {target.name} for {_damage}");
+            Debug.Log($"[ContactDamage] Damaged {target.name} for {_damage}");
         }
     }
 }
