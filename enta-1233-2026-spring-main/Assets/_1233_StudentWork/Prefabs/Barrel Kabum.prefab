@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2227196579538559583}
   - component: {fileID: 3812370745621214413}
   - component: {fileID: 5235863360270039469}
+  - component: {fileID: 7424787161218477102}
   m_Layer: 0
   m_Name: Barrel Kabum
   m_TagString: Untagged
@@ -75,6 +76,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &7424787161218477102
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477187189987245829}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &4903423017883298948
 GameObject:
   m_ObjectHideFlags: 0

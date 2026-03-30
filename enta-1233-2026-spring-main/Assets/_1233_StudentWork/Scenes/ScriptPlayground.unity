@@ -750,6 +750,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980435177}
     - target: {fileID: 5365763488646223085, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365763488646223085, guid: d6695413a89a3e34dbb0dd727e18b9b1, type: 3}
       propertyPath: 'patrolPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 712503394}
@@ -2765,34 +2769,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 415d71b01ec872446bdd0000007d4e1a, type: 3}
---- !u!1 &1709641791 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 477187189987245829, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
-  m_PrefabInstance: {fileID: 6272384794855091339}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &1709641795
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709641791}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 1
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1753525604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3783,17 +3759,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel Kabum
       objectReference: {fileID: 0}
-    - target: {fileID: 2217126656552174562, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217126656552174562, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2227196579538559583, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2227196579538559583, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3801,7 +3769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2227196579538559583, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2227196579538559583, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3834,10 +3802,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 477187189987245829, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1709641795}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
 --- !u!1001 &7183005692206688724
 PrefabInstance:
