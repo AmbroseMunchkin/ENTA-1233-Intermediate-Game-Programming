@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _direction;
 
+    [SerializeField] private int _damage = 20;
     [SerializeField] private float jumpPower;
     private int _numberOfJumps;
     [SerializeField] private int maxNumberOfJumps = 2;
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
     }
     private void ApplyRotation()
     {
-        if  (_input.sqrMagnitude == 0) return;
+        if (_input.sqrMagnitude == 0) return;
 
         var targetAngle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg;
         var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _currentVelocity, smoothTime);
@@ -144,5 +145,25 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         GameMgr.Instance.GameOver();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        TryApplyDamage(other.gameObject);
+    }
+    private void TryApplyDamage(GameObject target)
+    {
+        var damageReceiver = target.GetComponent<IDamageReceiver>();
+        if (damageReceiver != null)
+        {
+            var info = new DamageInfo
+            {
+                Amount = _damage,
+                Source = gameObject,
+                HitPoint = target.transform.position,
+                HitNormal = Vector3.up
+            };
+            damageReceiver.ApplyDamage(info);
+            Debug.Log($"[ContactDamage] Damaaged {target.name} for {_damage}");
+        }
     }
 }
