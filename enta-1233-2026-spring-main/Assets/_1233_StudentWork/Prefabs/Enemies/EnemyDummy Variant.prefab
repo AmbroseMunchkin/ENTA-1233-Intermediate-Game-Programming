@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7629659114320081284, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 3998972696948709702}
     - target: {fileID: 3326355186000562099, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -55,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 4256569050454921928, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934086295105408162, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681578811150791539, guid: 81d32a4054193a941ade80b25e24e2be, type: 3}
       propertyPath: _animator
