@@ -67,7 +67,11 @@ public class AudioMgr : Singleton<AudioMgr>
     /// </summary>
     public float GlobalVolume
     {
-        set => SaveUtil.SavedValues.GlobalVolume = value;
+        set
+        {
+            SaveUtil.SavedValues.GlobalVolume = value;
+            _mixer.SetFloat("MasterVol", GlobalVolume);
+        }
         get => SaveUtil.SavedValues.GlobalVolume;
     }
     
@@ -76,7 +80,11 @@ public class AudioMgr : Singleton<AudioMgr>
     /// </summary>
     public float MusicVolume
     {
-        set => SaveUtil.SavedValues.MusicVolume = value;
+        set
+        {
+            SaveUtil.SavedValues.MusicVolume = value;
+            _mixer.SetFloat("MusicVol", MusicVolume);
+        }
         get => SaveUtil.SavedValues.MusicVolume;
     }
     
@@ -85,7 +93,11 @@ public class AudioMgr : Singleton<AudioMgr>
     /// </summary>
     public float SfxVolume
     {
-        set => SaveUtil.SavedValues.SfxVolume = value;
+        set
+        {
+            SaveUtil.SavedValues.SfxVolume = value;
+            _mixer.SetFloat("SfxVol", SfxVolume);
+        }
         get => SaveUtil.SavedValues.SfxVolume;
     }
     
