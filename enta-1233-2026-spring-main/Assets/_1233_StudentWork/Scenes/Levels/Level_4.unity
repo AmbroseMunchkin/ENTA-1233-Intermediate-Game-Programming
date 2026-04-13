@@ -521,6 +521,22 @@ PrefabInstance:
       propertyPath: cameraToDeactivate1
       value: 
       objectReference: {fileID: 342006928}
+    - target: {fileID: 5923838206929214577, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
+      propertyPath: cameraToDeactivate2
+      value: 
+      objectReference: {fileID: 342006928}
+    - target: {fileID: 5923838206929214577, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
+      propertyPath: cameraToDeactivate3
+      value: 
+      objectReference: {fileID: 342006928}
+    - target: {fileID: 5923838206929214577, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
+      propertyPath: cameraToDeactivate4
+      value: 
+      objectReference: {fileID: 342006928}
+    - target: {fileID: 5923838206929214577, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
+      propertyPath: cameraToDeactivate5
+      value: 
+      objectReference: {fileID: 342006928}
     - target: {fileID: 6040639601696057223, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -1373,7 +1389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8422757091120159102, guid: 055157333c0406e49a64e8a016075965, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.02
+      value: 48.3
       objectReference: {fileID: 0}
     - target: {fileID: 8422757091120159102, guid: 055157333c0406e49a64e8a016075965, type: 3}
       propertyPath: m_LocalPosition.z

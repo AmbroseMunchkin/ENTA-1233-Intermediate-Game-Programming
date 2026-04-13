@@ -2289,6 +2289,7 @@ MonoBehaviour:
   _animator: {fileID: 6421625793607679732}
   _audioHandler: {fileID: 3121974910269914961}
   _health: {fileID: 1561231513599678152}
+  _explosiveBarrel: {fileID: 477187189987245829, guid: 2bacfa90a1c951541b6060f24c8b7ed0, type: 3}
 --- !u!114 &3002034724498201828
 MonoBehaviour:
   m_ObjectHideFlags: 0

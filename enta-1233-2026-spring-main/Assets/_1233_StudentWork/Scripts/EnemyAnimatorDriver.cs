@@ -36,5 +36,6 @@ public class EnemyAnimatorDriver : MonoBehaviour
     {
         if (_animator == null) return;
         _animator.SetTrigger(DieTriggerHash);
+        _animator = null;
     }
 }

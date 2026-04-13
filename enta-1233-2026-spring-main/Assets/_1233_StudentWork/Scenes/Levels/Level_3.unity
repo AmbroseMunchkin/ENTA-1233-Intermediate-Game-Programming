@@ -601,6 +601,14 @@ PrefabInstance:
       propertyPath: cameraToDeactivate3
       value: 
       objectReference: {fileID: 1551007403}
+    - target: {fileID: 5923838206929214577, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
+      propertyPath: cameraToDeactivate4
+      value: 
+      objectReference: {fileID: 342006928}
+    - target: {fileID: 5923838206929214577, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
+      propertyPath: cameraToDeactivate5
+      value: 
+      objectReference: {fileID: 342006928}
     - target: {fileID: 6040639601696057223, guid: 16baebf0f0284c143ace5727c71b3ebe, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -1496,8 +1504,8 @@ MonoBehaviour:
   cameraToDeactivate1: {fileID: 342006928}
   cameraToDeactivate2: {fileID: 342006927}
   cameraToDeactivate3: {fileID: 1551007403}
-  cameraToDeactivate4: {fileID: 0}
-  cameraToDeactivate5: {fileID: 0}
+  cameraToDeactivate4: {fileID: 342006928}
+  cameraToDeactivate5: {fileID: 342006928}
 --- !u!65 &920501041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3230,8 +3238,8 @@ MonoBehaviour:
   cameraToDeactivate1: {fileID: 342006928}
   cameraToDeactivate2: {fileID: 342006927}
   cameraToDeactivate3: {fileID: 618106264}
-  cameraToDeactivate4: {fileID: 0}
-  cameraToDeactivate5: {fileID: 0}
+  cameraToDeactivate4: {fileID: 342006928}
+  cameraToDeactivate5: {fileID: 342006928}
 --- !u!65 &2142929323
 BoxCollider:
   m_ObjectHideFlags: 0

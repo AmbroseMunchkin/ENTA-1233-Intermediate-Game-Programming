@@ -5,19 +5,18 @@ public class BarrelExplosionDamage : MonoBehaviour
 {
     [SerializeField] private int _damage = 20;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("In collider");
-        var position = collision.transform.position;
-        TryApplyDamage(collision.gameObject);
-        SpawnImpact(position);
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
-        TryApplyDamage(other.gameObject);
-        Debug.Log("In collider");
-        var position = other.transform.position;
-        SpawnImpact(position);
+        
+        
+        if (other.CompareTag("Player") && other.CompareTag("Bomb")) return;
+        if (!other.CompareTag("Player") && !other.CompareTag("Bomb"))
+        {
+            Debug.Log("In collider");
+            var position = other.transform.position;
+            TryApplyDamage(other.gameObject);
+        }
     }
 
 
@@ -34,7 +33,9 @@ public class BarrelExplosionDamage : MonoBehaviour
                 HitNormal = Vector3.up
             };
             damageReceiver.ApplyDamage(info);
-            Debug.Log($"[ContactDamage] Damaaged {target.name} for {_damage}");
+            Debug.Log($"[ContactDamage] Damaged {target.name} for {_damage}");
+            var position = target.transform.position;
+            SpawnImpact(position);
             Destroy(gameObject);
         }
     }
