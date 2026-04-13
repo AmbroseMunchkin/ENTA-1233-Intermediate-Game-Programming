@@ -299,8 +299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 321.95258, y: -140.84534}
-  m_SizeDelta: {x: 502.1696, y: 168.7293}
+  m_AnchoredPosition: {x: 329.21442, y: -111.79797}
+  m_SizeDelta: {x: 516.6932, y: 110.6345}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3308128180415586870
 GameObject:
@@ -576,7 +576,7 @@ MonoBehaviour:
     SPACE
     BAR - Jump / Double Jump
 
-    F - Attac'
+    F - Spawn Bomb'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
