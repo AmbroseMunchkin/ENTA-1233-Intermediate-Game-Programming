@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Health _health;
 
+    [SerializeField] private GameObject _explosiveBarrel;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -106,7 +108,12 @@ public class PlayerController : MonoBehaviour
         if (!context.started) return;
 
         Debug.Log("Attack!");
-        _animator?.SetTrigger("Attack");
+
+        SpawnBarrel();
+    }
+    private void SpawnBarrel()
+    {
+        Instantiate(_explosiveBarrel, transform.position, transform.rotation);
     }
 
     private IEnumerator WaitForLanding()
@@ -148,7 +155,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        TryApplyDamage(other.gameObject);
+        //TryApplyDamage(other.gameObject);
     }
     private void TryApplyDamage(GameObject target)
     {
