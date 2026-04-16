@@ -110,7 +110,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Attack!");
 
         SpawnBarrel();
-        //_animator?.SetTrigger("Attack");
     }
     private void SpawnBarrel()
     {

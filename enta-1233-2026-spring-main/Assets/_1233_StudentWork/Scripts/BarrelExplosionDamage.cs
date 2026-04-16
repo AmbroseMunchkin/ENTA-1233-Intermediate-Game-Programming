@@ -4,8 +4,9 @@ using UnityEngine;
 public class BarrelExplosionDamage : MonoBehaviour
 {
     [SerializeField] private int _damage = 20;
+    [SerializeField] private BarrelAudioHandler _audioHandler;
+    [SerializeField] private GameObject _audio;
 
-    
     private void OnTriggerEnter(Collider other)
     {
         
@@ -13,7 +14,7 @@ public class BarrelExplosionDamage : MonoBehaviour
         if (other.CompareTag("Player") && other.CompareTag("Bomb")) return;
         if (!other.CompareTag("Player") && !other.CompareTag("Bomb"))
         {
-            Debug.Log("In collider");
+            Debug.Log($"In collider {other.name}");
             var position = other.transform.position;
             TryApplyDamage(other.gameObject);
         }
@@ -36,6 +37,8 @@ public class BarrelExplosionDamage : MonoBehaviour
             Debug.Log($"[ContactDamage] Damaged {target.name} for {_damage}");
             var position = target.transform.position;
             SpawnImpact(position);
+            _audio.SetActive(true);
+
             Destroy(gameObject);
         }
     }
@@ -43,7 +46,10 @@ public class BarrelExplosionDamage : MonoBehaviour
     [SerializeField] private GameObject _impactVfxPrefab;
     void SpawnImpact(Vector3 position)
     {
+        _audio.SetActive(true);
         Instantiate(_impactVfxPrefab, position, Quaternion.identity);
+        
     }
     #endregion
+    
 }
